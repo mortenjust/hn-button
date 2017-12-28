@@ -1,0 +1,34 @@
+{
+   "manifest_version": 2,
+   "background": {
+        "scripts": ["xhr_handler.js"],
+        "persistent": false
+    },
+   "content_scripts": [ {
+      "css": [ "hn.css" ],
+      "js": [ "jquery.js", "script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   
+   "icons": { 
+    "16": "img/hn_on16.png",
+    "24": "img/hn_on24.png", 
+    "32": "img/hn_on32.png", 
+    "48": "img/hn_on48.png",   
+    "128": "img/hn_on128.png"
+    },
+   "description": "Hacker News integration for Chrome",
+   "name": "Hacker News Sidebar",
+   "permissions": [ "https://api.thriftdb.com/api.hnsearch.com/items/*", "https://news.ycombinator.com/*" ],
+   "version": "1.0.18", 
+   "browser_action": {
+    "default_icon": {        
+        "16": "img/hn_off16.png",
+        "24": "img/hn_off24.png", 
+        "32": "img/hn_off32.png", 
+        "48": "img/hn_off48.png",   
+        "128": "img/hn_off128.png"
+    },
+    "default_title": "Hackernews or not"
+  }
+}
